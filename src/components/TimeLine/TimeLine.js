@@ -43,25 +43,28 @@ const Timeline = () => {
   }, []);
 
   return (
-    <Section id="about">
-      <SectionTitle>About Me</SectionTitle>
+    <Section id="Acerca">
+      <SectionTitle>
+        Acerca de mi
+      </SectionTitle>
       <SectionText>
-      The purpose of JavaScript Mastery is to help aspiring and established developers to take their development skills to the next level and build awesome apps.
+        info
       </SectionText>
       <CarouselContainer ref={carouselRef} onScroll={handleScroll}>
         <>
-          {TimeLineData.map((item, index) => (
-            <CarouselMobileScrollNode
-              key={index}
-              final={index === TOTAL_CAROUSEL_COUNT - 1}>
-              <CarouselItem
-                index={index}
-                id={`carousel__item-${index}`}
-                active={activeItem}
-                onClick={(e) => handleClick(e, index)}>
-                <CarouselItemTitle>
-                  {`${item.year}`}
-                  <CarouselItemImg
+        {
+          TimeLineData.map((item, index)=>(
+           
+            <CarouselMobileScrollNode key={index} final={index === TOTAL_CAROUSEL_COUNT - 1}>
+            <CarouselItem
+            index={index}
+            id={`carousel__Iten-${index}`}
+            active={activeItem}
+            onClick={(e)=> handleClick(e, index)}
+            >
+           <CarouselItemTitle>
+             {item.year}
+             <CarouselItemImg
                     width="208"
                     height="6"
                     viewBox="0 0 208 6"
@@ -91,29 +94,32 @@ const Timeline = () => {
                       </linearGradient>
                     </defs>
                   </CarouselItemImg>
-                </CarouselItemTitle>
-                <CarouselItemText>{item.text}</CarouselItemText>
-              </CarouselItem>
+        
+           </CarouselItemTitle>
+           <CarouselItemText>{item.text}</CarouselItemText>
+            </CarouselItem>
+
             </CarouselMobileScrollNode>
-          ))}
+          )) }
         </>
       </CarouselContainer>
       <CarouselButtons>
-        {TimeLineData.map((item, index) => {
-          return (
-            <CarouselButton
-              key={index}
-              index={index}
-              active={activeItem}
-              onClick={(e) => handleClick(e, index)}
-              type="button">
-              <CarouselButtonDot active={activeItem} />
-            </CarouselButton>
-          );
-        })}
+        {TimeLineData.map((item, index)=> (
+          <CarouselButton
+          key={index}
+          index={index}
+          active={activeItem}
+          onClick={(e)=> handleClick(e, index)}
+          type="button"
+          >
+            <CarouselButtonDot active={activeItem}/>
+              
+          </CarouselButton>
+
+        ))}
       </CarouselButtons>
-      <SectionDivider />
-    </Section>
+      <SectionDivider/>
+      </Section>
   );
 };
 

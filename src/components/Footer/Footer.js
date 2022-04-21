@@ -6,36 +6,48 @@ import { CompanyContainer, FooterWrapper, LinkColumn, LinkItem, LinkList, LinkTi
 
 const Footer = () => {
   return (
-    <FooterWrapper>
-      <LinkList>
+      <FooterWrapper>
+        <LinkList>
         <LinkColumn>
-          <LinkTitle>Call</LinkTitle>
-          <LinkItem href="tel:314-343-3432">314-343-3432</LinkItem>
+        <LinkTitle>
+        Call
+        </LinkTitle>
+        <LinkItem href='Tel:111-111-11'>
+        Tel:111-111-11
+        </LinkItem>
         </LinkColumn>
+
         <LinkColumn>
-          <LinkTitle>Email</LinkTitle>
-          <LinkItem href="mailto:contact@jsmastery.com">
-            contact@jsmastery.com
-          </LinkItem>
+        <LinkTitle>
+          Email
+        </LinkTitle>
+        <LinkItem href='mailto:ness.cero1@gmail.com'>
+            ness.cero1@gmail.com
+        </LinkItem>
         </LinkColumn>
-      </LinkList>
-      <SocialIconsContainer>
-        <CompanyContainer>
-          <Slogan>Innovating one project at a time</Slogan>
-        </CompanyContainer>
-        <SocialContainer>
-          <SocialIcons href="https://google.com">
-            <AiFillGithub size="3rem" />
+        </LinkList>
+        <SocialIconsContainer>
+         <SocialContainer>
+          <Slogan>
+            eslogan de fotter 
+          </Slogan>       
+          </SocialContainer>
+          <SocialContainer>
+          <SocialIcons href='Github'>
+            <AiFillGithub size="3rem"/>
           </SocialIcons>
-          <SocialIcons href="https://google.com">
-            <AiFillLinkedin size="3rem" />
+
+          <SocialIcons href='Instagram'>
+            <AiFillInstagram size="3rem"/>
           </SocialIcons>
-          <SocialIcons href="https://google.com">
-            <AiFillInstagram size="3rem" />
-          </SocialIcons>
-        </SocialContainer>
-      </SocialIconsContainer>
-    </FooterWrapper>
+
+          <SocialIcons href='Linkedin'>
+            <AiFillLinkedin size="3rem"/>
+          </SocialIcons>   
+          </SocialContainer>
+        </SocialIconsContainer>
+
+      </FooterWrapper>
   );
 };
 
