@@ -32,6 +32,7 @@ const Footer = () => {
             eslogan de fotter 
           </Slogan>       
           </SocialContainer>
+          <SocialContainer>
           <SocialIcons href='Github'>
             <AiFillGithub size="3rem"/>
           </SocialIcons>
@@ -43,6 +44,7 @@ const Footer = () => {
           <SocialIcons href='Linkedin'>
             <AiFillLinkedin size="3rem"/>
           </SocialIcons>   
+          </SocialContainer>
         </SocialIconsContainer>
 
       </FooterWrapper>
